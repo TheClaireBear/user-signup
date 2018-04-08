@@ -56,8 +56,8 @@ def index():
 		return render_template('form.html',fields=fields, errors=errors, has_error=has_error)
 
 
-@app.route('/success')
-def success():
+@app.route('/pass')
+def pass():
 	return render_template('pass.html', name=request.args.get('name'))
 
 if __name__ =='__main__':
