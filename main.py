@@ -48,7 +48,7 @@ def index():
 		
 		if not has_error:
 			
-			return redirect(url_for("success", name=fields['username']))
+			return redirect(url_for("pass", name=fields['username']))
 		else:
 			return render_template('form.html', fields=fields, errors=errors, has_error=has_error)
 
@@ -58,7 +58,7 @@ def index():
 
 @app.route('/success')
 def success():
-	return render_template('success.html', name=request.args.get('name'))
+	return render_template('pass.html', name=request.args.get('name'))
 
 if __name__ =='__main__':
     app.run()
