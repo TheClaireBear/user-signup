@@ -48,7 +48,7 @@ def index():
 		
 		if not has_error:
 			
-			return redirect(url_for("pass", name=fields['username']))
+			return redirect(url_for("success", name=fields['username']))
 		else:
 			return render_template('form.html', fields=fields, errors=errors, has_error=has_error)
 
